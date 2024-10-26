@@ -8,6 +8,7 @@
 		'Vue',
 		'Nuxt',
 		'Svelte',
+		'Astro',
 		'Remix',
 		'Svelte Kit',
 		'Solid.JS',

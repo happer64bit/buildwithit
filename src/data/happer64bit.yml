@@ -1,4 +1,4 @@
 name: Happer64Bit
 category: portfolio
 link: https://happer64bit.vercel.app
-build-with: astro
+build-with: Astro
