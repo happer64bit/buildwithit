@@ -2,3 +2,4 @@ name: ChatGPT
 category: AI
 link: https://chatgpt.com
 build-with: Remix
+description: "ChatGPT is an AI language model that enables intelligent conversations and responses. Built with Remix, it's ideal for applications like customer support and content creation."

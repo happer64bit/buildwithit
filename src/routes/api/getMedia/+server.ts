@@ -14,7 +14,7 @@ export async function GET({ url }) {
         return new Response("Image not found", { status: 404 });
     }
 
-    const imageResponse = await read(imageFile.default);
+    const imageResponse = read(imageFile.default);
     const imageData = await imageResponse.arrayBuffer();
 
     return new Response(imageData, {

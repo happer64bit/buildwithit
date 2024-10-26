@@ -2,3 +2,5 @@ name: Happer64Bit
 category: portfolio
 link: https://happer64bit.vercel.app
 build-with: Astro
+description: "Just a portfolio of a student from Myanmar"
+source-code: https://github.com/happer64bit/homepage

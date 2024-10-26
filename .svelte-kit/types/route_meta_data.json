@@ -5,5 +5,8 @@
 	],
 	"/api/getMedia": [
 		"src/routes/api/getMedia/+server.ts"
+	],
+	"/[id]": [
+		"src/routes/[id]/+page.ts"
 	]
 }

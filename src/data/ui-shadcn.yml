@@ -2,3 +2,5 @@ name: Shadcn UI Docs
 category: Library
 link: https://ui.shadcn.com/
 build-with: Next.js
+source-code: https://github.com/shadcn-ui/ui
+description: "Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source."

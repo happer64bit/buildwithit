@@ -2,3 +2,5 @@ name: JoyOfCode
 category: Blog
 link: https://joyofcode.xyz/
 build-with: Svelte Kit
+description: "Joy of Code is a digital garden growing curious minds with content related to web development, and design."
+source-code: https://github.com/mattcroat/joy-of-code

@@ -104,7 +104,7 @@
 			{#each websiteData.filter((site) => site.name
 					.toLowerCase()
 					.includes(searchQuery.toLowerCase())) as site}
-				<a href={site.url + '?ref=buildwithit'} target="_blank">
+				<a href={`/${site.id}`}>
 					<div
 						class="bg-gray-100 px-4 py-5 border border-transparent hover:border-gray-300 rounded-lg hover:text-blue-500"
 					>

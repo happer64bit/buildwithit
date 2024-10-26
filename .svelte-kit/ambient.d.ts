@@ -75,6 +75,7 @@ declare module '$env/static/private' {
 	export const USERDOMAIN_ROAMINGPROFILE: string;
 	export const USERNAME: string;
 	export const USERPROFILE: string;
+	export const VIPSHOME: string;
 	export const VIRTUAL_ENV_DISABLE_PROMPT: string;
 	export const windir: string;
 	export const ZES_ENABLE_SYSMAN: string;
@@ -177,6 +178,7 @@ declare module '$env/dynamic/private' {
 		USERDOMAIN_ROAMINGPROFILE: string;
 		USERNAME: string;
 		USERPROFILE: string;
+		VIPSHOME: string;
 		VIRTUAL_ENV_DISABLE_PROMPT: string;
 		windir: string;
 		ZES_ENABLE_SYSMAN: string;
