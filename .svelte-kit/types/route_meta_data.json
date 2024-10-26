@@ -1,0 +1,9 @@
+{
+	"/": [],
+	"/api/getAllData": [
+		"src/routes/api/getAllData/+server.ts"
+	],
+	"/api/getMedia": [
+		"src/routes/api/getMedia/+server.ts"
+	]
+}

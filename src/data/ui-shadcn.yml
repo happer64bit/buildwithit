@@ -1,0 +1,4 @@
+name: Shadcn UI Docs
+category: Library
+link: https://ui.shadcn.com/
+build-with: nextjs
