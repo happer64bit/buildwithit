@@ -32,6 +32,7 @@
 
 	let websiteData: Website[] = [];
 	let searchQuery = '';
+	let selectedFramework = ''; // Store selected framework
 
 	// Load data on mount
 	onMount(async () => {
@@ -65,6 +66,11 @@
 			console.error('Error loading data:', error);
 		}
 	}
+
+	// Toggle selected framework
+	function toggleFramework(framework: string) {
+		selectedFramework = selectedFramework === framework ? '' : framework;
+	}
 </script>
 
 <svelte:head>
@@ -92,7 +98,9 @@
 			<div class="mt-2 flex flex-wrap gap-2">
 				{#each frameworks as framework}
 					<button
-						class="border dark:border-none rounded-full px-4 py-0.5 hover:bg-black/10 dark:hover:bg-white/5"
+						class="border dark:border-none rounded-full px-4 py-0.5 hover:bg-black/10 dark:hover:bg-white/5 data-[selected=true]:bg-black/10 dark:data-[selected=true]:bg-white/10"
+						on:click={() => toggleFramework(framework)}
+						data-selected={selectedFramework === framework}
 					>
 						{framework}
 					</button>
@@ -101,9 +109,12 @@
 		</div>
 
 		<div class="container grid grid-cols-2 gap-5 mb-10">
-			{#each websiteData.filter((site) => site.name
-					.toLowerCase()
-					.includes(searchQuery.toLowerCase())) as site}
+			{#each websiteData
+				.filter((site) => {
+					const matchesSearch = site.name.toLowerCase().includes(searchQuery.toLowerCase());
+					const matchesFramework = !selectedFramework || site.buildWith === selectedFramework;
+					return matchesSearch && matchesFramework;
+				}) as site}
 				<a href={`/${site.id}`}>
 					<div
 						class="bg-gray-100 px-4 py-5 border border-transparent hover:border-gray-300 rounded-lg hover:text-blue-500"
