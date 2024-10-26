@@ -36,6 +36,7 @@
 	"dependencies": {
 		"@fontsource-variable/instrument-sans": "^5.1.0",
 		"@sveltejs/adapter-node": "^5.2.9",
+		"@sveltejs/adapter-vercel": "^5.4.6",
 		"js-yaml": "^4.1.0"
 	}
 }
