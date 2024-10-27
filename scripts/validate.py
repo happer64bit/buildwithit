@@ -17,7 +17,8 @@ ALLOWED_BUILD_WITH = {
     'Svelte Kit',
     'Solid.JS',
     'Astro',
-    'Qwik'
+    'Qwik',
+    'HTML'  # Added HTML as an allowed value
 }
 
 # Function to validate YAML syntax
@@ -25,6 +26,7 @@ def is_valid_yaml(file_path):
     try:
         with open(file_path, 'r') as file:
             yaml_content = yaml.safe_load(file)
+            
             # Validate link
             if 'link' in yaml_content:
                 if not is_valid_link(yaml_content['link']):
@@ -34,6 +36,11 @@ def is_valid_yaml(file_path):
             # Validate build-with (single value)
             if 'build-with' in yaml_content:
                 if not validate_build_with(yaml_content['build-with'], file_path):
+                    return False
+
+            # Validate source-code if present
+            if 'source-code' in yaml_content:
+                if not is_valid_source_code(yaml_content['source-code'], file_path):
                     return False
 
             return True
@@ -58,6 +65,14 @@ def validate_build_with(build_with, file_path):
     # Validate single entry
     if build_with not in ALLOWED_BUILD_WITH:
         print(f"❌ Invalid build-with entry in {file_path}: {build_with}")
+        return False
+    return True
+
+# Function to validate source-code field
+def is_valid_source_code(source_code, file_path):
+    # Example: Validate if source_code is a valid URL
+    if not is_valid_link(source_code):
+        print(f"❌ Invalid source-code URL in: {file_path} - {source_code}")
         return False
     return True
 

@@ -13,6 +13,7 @@
 		'Svelte Kit',
 		'Solid.JS',
 		'Qwik',
+		'HTML'
 	].sort();
 
 	interface Website {
