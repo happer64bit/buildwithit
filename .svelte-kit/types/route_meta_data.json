@@ -6,6 +6,12 @@
 	"/api/getMedia": [
 		"src/routes/api/getMedia/+server.ts"
 	],
+	"/rss.xml": [
+		"src/routes/rss.xml/+server.ts"
+	],
+	"/sitemap.xml": [
+		"src/routes/sitemap.xml/+server.ts"
+	],
 	"/[id]": [
 		"src/routes/[id]/+page.ts"
 	]
